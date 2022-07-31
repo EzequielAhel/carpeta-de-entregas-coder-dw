@@ -21,6 +21,16 @@ header{
     position: fixed;
 }
 
+.top-header-info {
+    font-size: 16px;
+    color: white;
+    background-color: #000000 ;
+}
+
+.info-telefono {
+    margin-right: 30px;
+}
+
 header nav {
     display: flex;
     justify-content: space-between;
