@@ -21,11 +21,11 @@ body {
     font-size: 16px;
     color: white;
     background-color: #000000;
-}
 
-.info-telefono {
-    margin-left: 30%;
-    margin-right: 30px;
+    .info-telefono {
+        margin-left: 30%;
+        margin-right: 30px;
+    }
 }
 
 header{
@@ -34,6 +34,64 @@ header{
     -webkit-caja-sombra: 10px 10px 15px 0px rgba(0,0,0,0.75);
     -moz-caja-sombra: 10px 10px 15px 0px rgba(0,0,0,0.75);
     z-index: 5;
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+            height: 100px;
+            background-color: rgba(0, 0, 255, 0.295);
+            padding: 10px;
+
+                img {
+                width: 80px;
+                height: 80px;
+                }
+    
+                h1 {
+                position: relative;
+                display:flex;
+                border-radius: 4px;
+                text-transform: uppercase;
+                background-color: white;
+                color: rgba(0, 0, 255, 0.295);
+                font-size: 20px;
+                overflow: hidden;
+                transition: all 500ms ease;
+                text-decoration: none;
+                margin: 20px;
+                font-weight: 200;
+                }
+    
+                link {
+                border-radius: 4px;
+                }
+    
+            .navbar-nav {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+    
+            ul li a {
+                position: relative;
+                display:block;
+                border-radius: 4px;
+                text-transform: uppercase;
+                background-color: rgb(252, 252, 252);
+                color: rgb(4, 8, 255);
+                font-size: 14px;
+                overflow: hidden;
+                transition: all 500ms ease;
+                text-decoration: none;
+                margin: 25px;
+                z-index: 0;
+                font-weight: 700;
+            }
+        }
 }
 
 .header-secciones {
@@ -42,63 +100,7 @@ header{
     width: 100%;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    height: 100px;
-    background-color: rgba(0, 0, 255, 0.295);
-    padding: 10px;
-}
 
-header nav img {
-    width: 80px;
-    height: 80px;
-}
-
-header nav h1 {
-    position: relative;
-    display:flex;
-    border-radius: 4px;
-    text-transform: uppercase;
-    background-color: white;
-    color: rgba(0, 0, 255, 0.295);
-    font-size: 20px;
-    overflow: hidden;
-    transition: all 500ms ease;
-    text-decoration: none;
-    margin: 20px;
-    font-weight: 200;
-}
-
-.nav-link {
-    border-radius: 4px;
-}
-
-.navbar-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-header nav ul li a {
-    position: relative;
-    display:block;
-    border-radius: 4px;
-    text-transform: uppercase;
-    background-color: rgb(252, 252, 252);
-    color: rgb(4, 8, 255);
-    font-size: 14px;
-    overflow: hidden;
-    transition: all 500ms ease;
-    text-decoration: none;
-    margin: 25px;
-    z-index: 0;
-    font-weight: 700;
-}
 
 /*------ESTILOS DEL MAIN------*/
 
@@ -432,97 +434,82 @@ div a {
 .row {
     margin-top: 5%;
     padding-top: 0%;
-    background-color: white;
+    background-color: rgb(0, 0, 255);
     border-radius: 5%;
 
-    .card-body-1 {
-        background-color: white;
-    }
-
     .card-title-1 {
-        color:rgb(0, 0, 255);;
+        color:  rgb(0, 0, 255);
         background-color: white;
         font-size: 25px;
         font-weight: 700;
     }
-    
+
     .card-text-1 {
-        color: black;
+        color:  rgb(0, 0, 255);;
         font-size: 15px;
         font-weight: 600;
+        background-color: white;
     }
-    
+
     p a {
-        color: rgb(0, 0, 255);
+        color: rgb(0, 0, 255); 
         background-color: white;
         font-size: 25px;
         font-weight: 500;
     }
 }
 
-.card-title-1 {
-    color: white;
-    background-color: rgb(0, 0, 255);
-    font-size: 25px;
-    font-weight: 700;
+div {
+    .accordion {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .parrafo {
+        background-color: rgb(0, 0, 255);
+        color: white;
+        margin-bottom: 0;
+    }
 }
 
-.card-text-1 {
-    color: black;
-    font-size: 15px;
-    font-weight: 600;
+div {
+    .form-contacto {
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-bottom: 2%;
+        padding-top: 2%;
+    }
+    
+    form div label h4 {
+        color: white;
+        background-color: rgb(0, 0, 255);
+        border-radius: 8px;
+        font-weight: 500;
+    }
 }
 
-p a {
-    color: white;
-    background-color:rgb(0, 0, 255);
-    font-size: 25px;
-    font-weight: 500;
-}
+div {
+    .card-title-carrito {
+        color: white;
+        background-color: rgb(0, 0, 255);
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 2%;
+    }
+    
+    .card-body-carrito {
+        background-color: white;
+    }
+    
+    .card-footer-carrito {
+        color: white;
+        background-color: rgb(0, 0, 255);
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 2%;
+    }
 
-.accordion {
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
 
-.parrafo {
-    background-color: rgb(0, 0, 255);
-    color: white;
-    margin-bottom: 0;
-}
-
-.form-contacto {
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-bottom: 2%;
-    padding-top: 2%;
-}
-
-form div label h4 {
-    color: white;
-    background-color: rgb(0, 0, 255);
-    border-radius: 8px;
-    font-weight: 500;
-}
-
-.card-title-carrito {
-    color: white;
-    background-color: rgb(0, 0, 255);
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 2%;
-}
-
-.card-body-carrito {
-    background-color: white;
-}
-
-.card-footer-carrito {
-    color: white;
-    background-color: rgb(0, 0, 255);
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 2%;
 }
 
 /*------ESTILOS DEL FOOTER------*/
