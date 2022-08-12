@@ -1,0 +1,84 @@
+// HEADER
+
+.top-header-info {
+    font-size: 16px;
+    color: white;
+    background-color: #000000;
+
+    .info-telefono {
+        margin-left: 30%;
+        margin-right: 30px;
+    }
+}
+
+header{
+    position: fixed;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+    -webkit-caja-sombra: 10px 10px 15px 0px rgba(0,0,0,0.75);
+    -moz-caja-sombra: 10px 10px 15px 0px rgba(0,0,0,0.75);
+    z-index: 5;
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+            height: 100px;
+            background-color: rgba(0, 0, 255, 0.295);
+            padding: 10px;
+
+                img {
+                width: 80px;
+                height: 80px;
+                }
+    
+                h1 {
+                position: relative;
+                display:flex;
+                border-radius: 4px;
+                text-transform: uppercase;
+                background-color: white;
+                color: rgba(0, 0, 255, 0.295);
+                font-size: 20px;
+                overflow: hidden;
+                transition: all 500ms ease;
+                text-decoration: none;
+                margin: 20px;
+                font-weight: 200;
+                }
+    
+                link {
+                border-radius: 4px;
+                }
+    
+            .navbar-nav {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+    
+            ul li a {
+                position: relative;
+                display:block;
+                border-radius: 4px;
+                text-transform: uppercase;
+                background-color: rgb(252, 252, 252);
+                color: rgb(4, 8, 255);
+                font-size: 14px;
+                overflow: hidden;
+                transition: all 500ms ease;
+                text-decoration: none;
+                margin: 25px;
+                z-index: 0;
+                font-weight: 700;
+            }
+        }
+}
+
+.header-secciones {
+    position: relative;
+    background-color:rgb(0, 0, 255);
+    width: 100%;
+}
