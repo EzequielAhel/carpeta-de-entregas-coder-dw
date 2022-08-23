@@ -416,24 +416,23 @@ header nav ul li a {
 .row {
   margin-top: 5%;
   padding-top: 0%;
-  background-color: rgb(0, 0, 255);
+  background-color: white;
   border-radius: 5%;
 }
 .row .card-title-1 {
-  color: rgb(0, 0, 255);
-  background-color: white;
+  color: white;
+  background-color: rgb(0, 0, 255);
   font-size: 25px;
   font-weight: 700;
 }
 .row .card-text-1 {
-  color: rgb(0, 0, 255);
+  color: black;
   font-size: 15px;
   font-weight: 600;
-  background-color: white;
 }
 .row p a {
-  color: rgb(0, 0, 255);
-  background-color: white;
+  color: white;
+  background-color: rgb(0, 0, 255);
   font-size: 25px;
   font-weight: 500;
   text-decoration: none;
