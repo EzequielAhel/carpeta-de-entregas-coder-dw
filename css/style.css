@@ -135,7 +135,7 @@ header nav ul li a {
 .portada {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.38)), url(../imagenes/banners/ventana-semiabierta2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.38)), url(../imagenes/banners/ventana-semiabierta-2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -204,16 +204,16 @@ header nav ul li a {
   padding: 15px;
 }
 
-.img-auspiciantes {
+.auspiciantes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat 3, 1fr;
   grid-auto-rows: 250px;
   grid-area: span;
   gap: 15px;
   margin-top: 4%;
   margin-bottom: 4%;
 }
-.img-auspiciantes .img-1 {
+.auspiciantes .flamia-logo {
   margin: 10%;
   width: 250px;
   background-color: rgb(0, 0, 255);
@@ -221,7 +221,7 @@ header nav ul li a {
   -webkit-caja-sombra: 10px 10px 15px rgb(0, 0, 255);
   -moz-caja-sombra: 10px 10px 15px 0px rgb(0, 0, 255);
 }
-.img-auspiciantes .img-2 {
+.auspiciantes .caiaplacas-logo {
   margin: 10%;
   width: 250px;
   background-color: rgb(0, 0, 255);
@@ -229,7 +229,7 @@ header nav ul li a {
   -webkit-caja-sombra: 10px 10px 15px rgb(0, 0, 255);
   -moz-caja-sombra: 10px 10px 15px 0px rgb(0, 0, 255);
 }
-.img-auspiciantes .img-3 {
+.auspiciantes .claraluz-logo {
   margin: 10%;
   width: 250px;
   background-color: rgb(0, 0, 255);
@@ -237,7 +237,7 @@ header nav ul li a {
   -webkit-caja-sombra: 10px 10px 15px rgb(0, 0, 255);
   -moz-caja-sombra: 10px 10px 15px 0px rgb(0, 0, 255);
 }
-.img-auspiciantes .img-4 {
+.auspiciantes .fraccaro-logo {
   margin: 10%;
   width: 250px;
   background-color: rgb(0, 0, 255);
@@ -245,7 +245,7 @@ header nav ul li a {
   -webkit-caja-sombra: 10px 10px 15px rgb(0, 0, 255);
   -moz-caja-sombra: 10px 10px 15px 0px rgb(0, 0, 255);
 }
-.img-auspiciantes .img-5 {
+.auspiciantes .prive-logo {
   margin: 10%;
   width: 250px;
   background-color: rgb(0, 0, 255);
@@ -253,9 +253,9 @@ header nav ul li a {
   -webkit-caja-sombra: 10px 10px 15px rgb(0, 0, 255);
   -moz-caja-sombra: 10px 10px 15px 0px rgb(0, 0, 255);
 }
-.img-auspiciantes .img-6 {
+.auspiciantes .surmetal-logo {
   margin: 10%;
-  width: 200px;
+  width: 250px;
   background-color: rgb(0, 0, 255);
   box-shadow: 10px 10px 15px 0px rgb(0, 0, 255);
   -webkit-caja-sombra: 10px 10px 15px rgb(0, 0, 255);
@@ -373,8 +373,8 @@ header nav ul li a {
   padding: 12px;
   margin-top: 25px;
 }
-.section-galeria .section-container-galeria {
-  background-color: rgba(0, 17, 255, 0.397);
+
+section .section-container-galeria {
   width: 100%;
   padding: 80px;
   display: grid;
@@ -382,7 +382,7 @@ header nav ul li a {
   grid-auto-rows: 250px;
   gap: 15px;
 }
-.section-galeria .grid-container-img {
+section .section-container-galeria div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -390,26 +390,26 @@ header nav ul li a {
   -webkit-caja-sombra: 10px 10px 15px 0px rgba(0, 0, 0, 0.75);
   -moz-caja-sombra: 10px 10px 15px 0px rgba(0, 0, 0, 0.75);
 }
-.section-galeria .img-galeria-1 {
+section .img-galeria-1 {
   grid-column-start: span 2;
 }
-.section-galeria .img-galeria-2 {
+section .img-galeria-2 {
   grid-row-start: span 2;
 }
-.section-galeria .img-galeria-3 {
+section .img-galeria-3 {
   grid-row-start: span;
 }
-.section-galeria .img-galeria-5 {
+section .img-galeria-5 {
   grid-column-start: span 2;
   grid-row-start: span 2;
 }
-.section-galeria .img-galeria-6 {
+section .img-galeria-6 {
   grid-row-start: span 2;
 }
-.section-galeria .img-galeria-9 {
+section .img-galeria-9 {
   grid-row-start: span 2;
 }
-.section-galeria .img-galeria-10 {
+section .img-galeria-10 {
   grid-column-start: span 2;
 }
 
@@ -431,6 +431,8 @@ header nav ul li a {
   font-weight: 600;
 }
 .row p a {
+  display: flex;
+  justify-content: center;
   color: white;
   background-color: rgb(0, 0, 255);
   font-size: 25px;
@@ -470,6 +472,11 @@ div .card-title-carrito {
 }
 div .card-body-carrito {
   background-color: white;
+  margin-bottom: 2%;
+}
+div .card-body-carrito .card-text {
+  color: rgb(0, 0, 255);
+  margin-top: 2%;
 }
 div .card-footer-carrito {
   color: white;

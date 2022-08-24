@@ -129,7 +129,7 @@ header{
     width: 100%;
     height: 100vh;
 
-    background: linear-gradient(rgba(0, 0, 0, 0.280), rgba(0, 0, 0, 0.380)), url(../imagenes/banners/ventana-semiabierta2.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.280), rgba(0, 0, 0, 0.380)), url(../imagenes/banners/ventana-semiabierta-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -214,16 +214,16 @@ header{
 }
 
 
-.img-auspiciantes {
+.auspiciantes {
     display: grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat (3, 1fr);
     grid-auto-rows: 250px;
     grid-area: span;
     gap: 15px;
     margin-top: 4%;
     margin-bottom: 4%;
 
-    .img-1 {
+    .flamia-logo {
         margin: 10%;
         width: 250px;
         background-color: rgb(0, 0, 255);
@@ -232,7 +232,7 @@ header{
         -moz-caja-sombra: 10px 10px 15px 0px rgb(0, 0, 255);
     }
     
-    .img-2 {
+    .caiaplacas-logo {
         margin: 10%;
         width: 250px;
         background-color: rgb(0, 0, 255);
@@ -241,7 +241,7 @@ header{
         -moz-caja-sombra: 10px 10px 15px 0px rgb(0, 0, 255);
     }
     
-    .img-3 {
+    .claraluz-logo {
         margin: 10%;
         width: 250px;
         background-color: rgb(0, 0, 255);
@@ -250,7 +250,7 @@ header{
         -moz-caja-sombra: 10px 10px 15px 0px rgb(0, 0, 255);
     }
     
-    .img-4 {
+    .fraccaro-logo {
         margin: 10%;
         width: 250px;
         background-color: rgb(0, 0, 255);
@@ -259,7 +259,7 @@ header{
         -moz-caja-sombra: 10px 10px 15px 0px rgb(0, 0, 255);
     }
     
-    .img-5 {
+    .prive-logo {
         margin: 10%;
         width: 250px;
         background-color: rgb(0, 0, 255);
@@ -268,16 +268,15 @@ header{
         -moz-caja-sombra: 10px 10px 15px 0px rgb(0, 0, 255);
     }
     
-    .img-6 {
+    .surmetal-logo {
         margin: 10%;
-        width: 200px;
+        width: 250px;
         background-color: rgb(0, 0, 255);
         box-shadow: 10px 10px 15px 0px rgb(0, 0, 255);
         -webkit-caja-sombra: 10px 10px 15px rgb(0, 0, 255);
         -moz-caja-sombra: 10px 10px 15px 0px rgb(0, 0, 255);
     }
 }
-
 
 .carousel{
     padding-top: 3%;
@@ -294,7 +293,6 @@ header{
         -moz-caja-sombra: 10px 10px 15px 0px rgba(0, 0, 0, 0.75);
     }
 }
-
 
 .row-cols-1 {
     margin-top: 20px;
@@ -406,24 +404,26 @@ header{
         padding: 12px;
         margin-top: 25px;
     }
-    
+}
+
+section {
     .section-container-galeria {
-        background-color: rgba(0, 17, 255, 0.397);
         width: 100%;
         padding: 80px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns:repeat(3, 1fr);
         grid-auto-rows: 250px;
         gap: 15px;
     }
-    
-    .grid-container-img {
+
+    .section-container-galeria div img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.75);
-        -webkit-caja-sombra: 10px 10px 15px 0px rgba(0, 0, 0, 0.75);
-        -moz-caja-sombra: 10px 10px 15px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+        -webkit-caja-sombra: 10px 10px 15px 0px rgba(0,0,0,0.75);
+        -moz-caja-sombra: 10px 10px 15px 0px rgba(0,0,0,0.75);
+
     }
     
     .img-galeria-1 {
@@ -435,7 +435,7 @@ header{
     }
     
     .img-galeria-3 {
-        grid-row-start: span;
+        grid-row-start: span ;
     }
     
     .img-galeria-5 {
@@ -454,7 +454,6 @@ header{
     .img-galeria-10 {
         grid-column-start: span 2;
     }
-    
 }
 
 .row {
@@ -477,6 +476,8 @@ header{
     }
 
     p a {
+        display: flex;
+        justify-content: center;
         color:  white;
         background-color: rgb(0, 0, 255);
         font-size: 25px;
@@ -525,6 +526,12 @@ div {
     
     .card-body-carrito {
         background-color: white;
+        margin-bottom: 2%;
+
+        .card-text {
+            color: rgb(0, 0, 255);
+            margin-top: 2%;
+        }
     }
     
     .card-footer-carrito {
