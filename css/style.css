@@ -212,33 +212,39 @@ section {
 .auspiciantes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 250px;
-  grid-area: span;
-  gap: 15px;
+  grid-auto-rows: 100px;
+  grid-area: span 2;
+  gap: 20px;
 }
 .auspiciantes .flamia-logo {
-  margin: 10%;
+  margin: 5%;
   width: 250px;
+  height: 80px;
 }
 .auspiciantes .caiaplacas-logo {
-  margin: 10%;
+  margin: 5%;
   width: 250px;
-}
-.auspiciantes .claraluz-logo {
-  margin: 10%;
-  width: 250px;
-}
-.auspiciantes .fraccaro-logo {
-  margin: 10%;
-  width: 250px;
-}
-.auspiciantes .prive-logo {
-  margin: 10%;
-  width: 250px;
+  height: 80px;
 }
 .auspiciantes .surmetal-logo {
-  margin: 10%;
+  margin: 5%;
+  width: 300px;
+  height: 80px;
+}
+.auspiciantes .claraluz-logo {
+  margin: 5%;
   width: 250px;
+  height: 60px;
+}
+.auspiciantes .fraccaro-logo {
+  margin: 5%;
+  width: 250px;
+  height: 50px;
+}
+.auspiciantes .ds-accesorios-logo {
+  margin: 5%;
+  width: 200px;
+  height: 70px;
 }
 
 .carousel {
