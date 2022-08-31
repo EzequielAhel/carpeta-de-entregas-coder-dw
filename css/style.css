@@ -494,6 +494,47 @@ div .card-footer-carrito {
   margin-bottom: 2%;
 }
 
+main .section-container-puertas-aluminio {
+  width: 100%;
+  padding: 50px;
+  padding-right: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main .section-container-puertas-chapa {
+  width: 100%;
+  padding: 50px;
+  padding-right: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main .section-container-puertas-placas {
+  width: 100%;
+  padding: 50px;
+  padding-right: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main .section-container-puertas-hoja-media {
+  width: 100%;
+  padding: 50px;
+  padding-right: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main .section-container-puertas-hoja-doble {
+  width: 100%;
+  padding: 50px;
+  padding-right: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
 /*------ESTILOS DEL FOOTER------*/
 footer {
   display: grid;
