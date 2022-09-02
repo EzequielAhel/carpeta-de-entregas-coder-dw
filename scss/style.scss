@@ -29,14 +29,14 @@
 /*------ESTILOS DEL BODY------*/
 
 body {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     overflow-x: hidden;
     font-family: 'Roboto';
     background: rgb(2,0,32);
-    background: -moz-linear-gradient(0deg, rgba(2,0,32,1) 0%, rgba(18,18,157,1) 35%, rgba(8,118,194,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(2,0,32,1) 0%, rgba(18,18,157,1) 35%, rgba(8,118,194,1) 100%);
-    background: linear-gradient(0deg, rgba(2,0,32,1) 0%, rgba(18,18,157,1) 35%, rgba(8,118,194,1) 100%);
+    background: -moz-linear-gradient(0deg, rgba(2,0,32,1) 0%, rgba(18,18,157,1) 35%, rgba(8,118,194,1) 100vw);
+    background: -webkit-linear-gradient(0deg, rgba(2,0,32,1) 0%, rgba(18,18,157,1) 35%, rgba(8,118,194,1) 100vw);
+    background: linear-gradient(0deg, rgba(2,0,32,1) 0%, rgba(18,18,157,1) 35%, rgba(8,118,194,1) 100vw);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020020",endColorstr="#0876c2",GradientType=1);
     font-weight: 300;
     font-size: 20px;
@@ -75,64 +75,85 @@ header{
     -moz-caja-sombra: 10px 10px 15px 0px rgba(0,0,0,0.75);
     z-index: 5;
 
-        nav {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        height: 100px;
+        background-color: rgba(0, 0, 255, 0.295);
+        padding: 10px;
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    
+        h1 {
+            position: relative;
+            display:flex;
+            border-radius: 4px;
+            text-transform: uppercase;
+            background-color: white;
+            color: rgba(0, 0, 255, 0.295);
+            font-size: 20px;
+            overflow: hidden;
+            transition: all 500ms ease;
+            text-decoration: none;
+            margin: 20px;
+            font-weight: 200;
+            }
+
+        link {
+            border-radius: 4px;
+        }
+    
+        .navbar-nav {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            width: 100vw;
-            height: 100px;
-            background-color: rgba(0, 0, 255, 0.295);
-            padding: 10px;
-
-                img {
-                width: 80px;
-                height: 80px;
-                }
-    
-                h1 {
-                position: relative;
-                display:flex;
-                border-radius: 4px;
-                text-transform: uppercase;
-                background-color: white;
-                color: rgba(0, 0, 255, 0.295);
-                font-size: 20px;
-                overflow: hidden;
-                transition: all 500ms ease;
-                text-decoration: none;
-                margin: 20px;
-                font-weight: 200;
-                }
-    
-                link {
-                border-radius: 4px;
-                }
-    
-            .navbar-nav {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                padding-left: 10px;
-                padding-right: 10px;
-                
-            }
-    
-            ul li a {
-                position: relative;
-                display:block;
-                border-radius: 4px;
-                text-transform: uppercase;
-                background-color: rgb(252, 252, 252);
-                color: rgb(4, 8, 255);
-                font-size: 14px;
-                overflow: hidden;
-                transition: all 500ms ease;
-                text-decoration: none;
-                margin: 25px;
-                z-index: 0;
-                font-weight: 700;
-            }
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;   
         }
+    
+        ul li a {
+            position: relative;
+            display:block;
+            border-radius: 4px;
+            text-transform: uppercase;
+            background-color: rgb(252, 252, 252);
+            color: rgb(4, 8, 255);
+            font-size: 14px;
+            overflow: hidden;
+            transition: all 500ms ease;
+            text-decoration: none;
+            margin: 25px;
+            z-index: 0;
+            font-weight: 700;
+        }
+
+        ul li a:hover {
+            transform: scale(1.2);
+        }
+
+        ul li a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to left,  #020020, #12129d, #0876c2);
+            z-index: 1;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        ul li a:hover::before {
+            transform: scaleX(1);
+        }
+    }
 }
 
 .header-secciones {
@@ -220,6 +241,27 @@ header{
             }
         }
     }
+
+    a:hover{
+        transform: scale(1.1);
+    }
+
+    a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2.5px;
+        background: linear-gradient(to left, #f7f7fa, #f7f7fa, #f7f7fa);
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: 0.5s ease;
+    }
+
+    a:hover:before {
+        transform: scaleX(1);
+    }
     
 }
 
@@ -301,6 +343,8 @@ header{
 
     .card {
         background-color: rgb(0, 0, 255);
+        border-color: black;
+        border-width: 0.5;
     
         .card-title {
             display: flex;
@@ -315,8 +359,9 @@ header{
             text-decoration: none;
             color: white;
             background-color: rgb(0, 0, 255);
-            border-radius: 50%;
             border-color: black;
+            border-style:groove;
+            border-width: 2px;
         }
         
         div a {
@@ -326,6 +371,11 @@ header{
             display: flex;
             justify-content: center;
         }
+
+        div a:hover {
+            transform: scale(1.2);
+        }
+        
     }
 
     .col-1 {
@@ -416,6 +466,27 @@ header{
         padding: 12px;
         margin-top: 25px;
     }
+
+    .section-galeria-a:hover {
+        transform: scale(1.1);
+    }
+
+    .section-galeria-a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2.5px;
+        background: linear-gradient(to left, #f7f7fa, #f7f7fa, #f7f7fa);
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: 0.5s ease;
+    }
+
+    .section-galeria-a:hover:before {
+        transform: scaleX(1);
+    }
 }
 
 section {
@@ -489,24 +560,55 @@ section {
     p a {
         display: flex;
         justify-content: center;
+        align-items:flex-end;
         color:  white;
         background-color: rgb(0, 0, 255);
         font-size: 25px;
         font-weight: 500;
         text-decoration: none;
     }
+
+    p a:hover {
+        transform:scale(1.1);
+    }
 }
 
 div {
     .accordion {
-        margin-top: 2%;
-        margin-bottom: 2%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
+
+    .accordion-item {
+        padding: 2%;
+    }
+
+    .accordion-button {
+        display: flex;
+        justify-content: center;
+        color: white;
+        background-color: rgb(0, 0, 255); 
+        margin: 5px;
+    }
+
+    .accordion-title {
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto';
+        font-size: 1.4rem;
+        font-weight: 900;
+        padding-left: 45%;
     }
 
     .parrafo {
         background-color: rgb(0, 0, 255);
         color: white;
-        margin-bottom: 0;
+        font-family: 'Roboto';
+        font-weight: 500;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
@@ -554,7 +656,68 @@ div {
     }
 }
 
-main {
+.productos-puertas {
+
+    .card {
+        margin: 2%;
+    }
+
+    .card-header {
+        background-color: rgb(0, 0, 255);
+    }
+
+    .h4-caracteristicas-puertas {
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto';
+        color: white;
+        font-weight: 700;
+        font-size: 25px;
+        margin: 15px;
+    }
+
+    .puertas-info {
+        font-family: 'Roboto';
+        font-weight: 600;
+        font-size: 20px;
+        color: black;
+        background-color: white;
+        margin: 10px;
+    }
+
+    .card-footer {
+        background-color: rgb(0, 0, 255);
+    }
+
+    .btn-consulta {
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto';
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        text-decoration: none;
+        margin: 10px;
+    }
+
+
+    .btn-consulta::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 23;
+        width: 23%;
+        height: 5px;
+        background: linear-gradient(to left, #f7f7fa, #f7f7fa, #f7f7fa);
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.5s ease;
+    }
+
+    .btn-consulta:hover:before {
+        transform: scaleX(1);
+    }
+
     .section-container-puertas-aluminio {
         width: 100vw;
         padding: 80px;
@@ -580,53 +743,111 @@ main {
     }
     
     .section-container-puertas-chapa {
-        width: 100%;
-        padding: 50px;
+        width: 100vw;
+        padding: 80px;
         padding-right: 40px;
-        display: grid;
-        grid-template-columns:repeat(3, 1fr);
-        gap: 20px;
+        padding-bottom: 100px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+
+        .puertas-chapa {
+            width: 100px;
+            height: 200px;
+            padding: 5px;
+        }
+        
+        .puertas-chapa:hover {
+            transform:scale(2);
+        }
     }
     
     .section-container-puertas-placas {
-        width: 100%;
-        padding: 50px;
+        width: 100vw;
+        padding: 80px;
         padding-right: 40px;
-        display: grid;
-        grid-template-columns:repeat(3, 1fr);
-        gap: 20px;
+        padding-bottom: 100px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+
+        .puertas-placas {
+            width: 100px;
+            height: 200px;
+            padding: 5px;
+        }
+        
+        .puertas-placas:hover {
+            transform:scale(2);
+        }
     }
     
     .section-container-puertas-hoja-media {
-        width: 100%;
-        padding: 50px;
+        width: 100vw;
+        padding: 80px;
         padding-right: 40px;
-        display: grid;
-        grid-template-columns:repeat(3, 1fr);
-        gap: 20px;
+        padding-bottom: 100px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+
+        .puertas-hoja-media {
+            width: 180px;
+            height: 200px;
+            padding: 5px;
+        }
+        
+        .puertas-hoja-media:hover {
+            transform:scale(2);
+        }
     }
     
     .section-container-puertas-hoja-doble {
-        width: 100%;
-        padding: 50px;
+        width: 100vw;
+        padding: 80px;
         padding-right: 40px;
-        display: grid;
-        grid-template-columns:repeat(3, 1fr);
-        gap: 20px;
+        padding-bottom: 100px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+
+        .puertas-hoja-doble {
+            width: 180px;
+            height: 200px;
+            padding: 5px;
+        }
+        
+        .puertas-hoja-doble:hover {
+            transform:scale(2);
+        }
     }
 }
-
 
 /*------ESTILOS DEL FOOTER------*/
 
 footer {
     display:grid;
     grid-template-rows: auto;
-    width: 100vw;
+    width: 100%;
     height: 450%;
     background-color: rgb(0, 0, 255);
 
-    
     img {
         display:flex;
         justify-content:center;

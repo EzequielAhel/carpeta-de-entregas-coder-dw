@@ -46,14 +46,14 @@ p5 {
 
 /*------ESTILOS DEL BODY------*/
 body {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   overflow-x: hidden;
   font-family: "Roboto";
   background: rgb(2, 0, 32);
-  background: -moz-linear-gradient(0deg, rgb(2, 0, 32) 0%, rgb(18, 18, 157) 35%, rgb(8, 118, 194) 100%);
-  background: -webkit-linear-gradient(0deg, rgb(2, 0, 32) 0%, rgb(18, 18, 157) 35%, rgb(8, 118, 194) 100%);
-  background: linear-gradient(0deg, rgb(2, 0, 32) 0%, rgb(18, 18, 157) 35%, rgb(8, 118, 194) 100%);
+  background: -moz-linear-gradient(0deg, rgb(2, 0, 32) 0%, rgb(18, 18, 157) 35%, rgb(8, 118, 194) 100vw);
+  background: -webkit-linear-gradient(0deg, rgb(2, 0, 32) 0%, rgb(18, 18, 157) 35%, rgb(8, 118, 194) 100vw);
+  background: linear-gradient(0deg, rgb(2, 0, 32) 0%, rgb(18, 18, 157) 35%, rgb(8, 118, 194) 100vw);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020020",endColorstr="#0876c2",GradientType=1);
   font-weight: 300;
   font-size: 20px;
@@ -140,6 +140,25 @@ header nav ul li a {
   z-index: 0;
   font-weight: 700;
 }
+header nav ul li a:hover {
+  transform: scale(1.2);
+}
+header nav ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to left, #020020, #12129d, #0876c2);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+header nav ul li a:hover::before {
+  transform: scaleX(1);
+}
 
 .header-secciones {
   position: relative;
@@ -211,6 +230,24 @@ header nav ul li a {
     transform: translateY(0px);
   }
 }
+.portada a:hover {
+  transform: scale(1.1);
+}
+.portada a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background: linear-gradient(to left, #f7f7fa, #f7f7fa, #f7f7fa);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: 0.5s ease;
+}
+.portada a:hover:before {
+  transform: scaleX(1);
+}
 
 .h2-a {
   background-color: rgb(0, 0, 255);
@@ -280,6 +317,8 @@ header nav ul li a {
 }
 .row-cols-1 .card {
   background-color: rgb(0, 0, 255);
+  border-color: black;
+  border-width: 0.5;
 }
 .row-cols-1 .card .card-title {
   display: flex;
@@ -293,8 +332,9 @@ header nav ul li a {
   text-decoration: none;
   color: white;
   background-color: rgb(0, 0, 255);
-  border-radius: 50%;
   border-color: black;
+  border-style: groove;
+  border-width: 2px;
 }
 .row-cols-1 .card div a {
   text-decoration: none;
@@ -302,6 +342,9 @@ header nav ul li a {
   font-weight: 300;
   display: flex;
   justify-content: center;
+}
+.row-cols-1 .card div a:hover {
+  transform: scale(1.2);
 }
 .row-cols-1 .col-1 {
   background-color: rgb(0, 0, 255);
@@ -381,6 +424,24 @@ header nav ul li a {
   padding: 12px;
   margin-top: 25px;
 }
+.section-galeria .section-galeria-a:hover {
+  transform: scale(1.1);
+}
+.section-galeria .section-galeria-a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background: linear-gradient(to left, #f7f7fa, #f7f7fa, #f7f7fa);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: 0.5s ease;
+}
+.section-galeria .section-galeria-a:hover:before {
+  transform: scaleX(1);
+}
 
 section .section-container-galeria {
   width: 100%;
@@ -441,21 +502,48 @@ section .img-galeria-10 {
 .row p a {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   color: white;
   background-color: rgb(0, 0, 255);
   font-size: 25px;
   font-weight: 500;
   text-decoration: none;
 }
+.row p a:hover {
+  transform: scale(1.1);
+}
 
 div .accordion {
-  margin-top: 2%;
-  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+div .accordion-item {
+  padding: 2%;
+}
+div .accordion-button {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: rgb(0, 0, 255);
+  margin: 5px;
+}
+div .accordion-title {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto";
+  font-size: 1.4rem;
+  font-weight: 900;
+  padding-left: 45%;
 }
 div .parrafo {
   background-color: rgb(0, 0, 255);
   color: white;
-  margin-bottom: 0;
+  font-family: "Roboto";
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 div .form-contacto {
@@ -494,7 +582,58 @@ div .card-footer-carrito {
   margin-bottom: 2%;
 }
 
-main .section-container-puertas-aluminio {
+.productos-puertas .card {
+  margin: 2%;
+}
+.productos-puertas .card-header {
+  background-color: rgb(0, 0, 255);
+}
+.productos-puertas .h4-caracteristicas-puertas {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto";
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  margin: 15px;
+}
+.productos-puertas .puertas-info {
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+  margin: 10px;
+}
+.productos-puertas .card-footer {
+  background-color: rgb(0, 0, 255);
+}
+.productos-puertas .btn-consulta {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto";
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  margin: 10px;
+}
+.productos-puertas .btn-consulta::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 23;
+  width: 23%;
+  height: 5px;
+  background: linear-gradient(to left, #f7f7fa, #f7f7fa, #f7f7fa);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+.productos-puertas .btn-consulta:hover:before {
+  transform: scaleX(1);
+}
+.productos-puertas .section-container-puertas-aluminio {
   width: 100vw;
   padding: 80px;
   padding-right: 40px;
@@ -506,52 +645,100 @@ main .section-container-puertas-aluminio {
   align-items: center;
   justify-content: center;
 }
-main .section-container-puertas-aluminio .puertas-aluminio {
+.productos-puertas .section-container-puertas-aluminio .puertas-aluminio {
   width: 100px;
   height: 200px;
   padding: 5px;
 }
-main .section-container-puertas-aluminio .puertas-aluminio:hover {
+.productos-puertas .section-container-puertas-aluminio .puertas-aluminio:hover {
   transform: scale(2);
 }
-main .section-container-puertas-chapa {
-  width: 100%;
-  padding: 50px;
+.productos-puertas .section-container-puertas-chapa {
+  width: 100vw;
+  padding: 80px;
   padding-right: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  padding-bottom: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
-main .section-container-puertas-placas {
-  width: 100%;
-  padding: 50px;
-  padding-right: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.productos-puertas .section-container-puertas-chapa .puertas-chapa {
+  width: 100px;
+  height: 200px;
+  padding: 5px;
 }
-main .section-container-puertas-hoja-media {
-  width: 100%;
-  padding: 50px;
-  padding-right: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.productos-puertas .section-container-puertas-chapa .puertas-chapa:hover {
+  transform: scale(2);
 }
-main .section-container-puertas-hoja-doble {
-  width: 100%;
-  padding: 50px;
+.productos-puertas .section-container-puertas-placas {
+  width: 100vw;
+  padding: 80px;
   padding-right: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  padding-bottom: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.productos-puertas .section-container-puertas-placas .puertas-placas {
+  width: 100px;
+  height: 200px;
+  padding: 5px;
+}
+.productos-puertas .section-container-puertas-placas .puertas-placas:hover {
+  transform: scale(2);
+}
+.productos-puertas .section-container-puertas-hoja-media {
+  width: 100vw;
+  padding: 80px;
+  padding-right: 40px;
+  padding-bottom: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.productos-puertas .section-container-puertas-hoja-media .puertas-hoja-media {
+  width: 180px;
+  height: 200px;
+  padding: 5px;
+}
+.productos-puertas .section-container-puertas-hoja-media .puertas-hoja-media:hover {
+  transform: scale(2);
+}
+.productos-puertas .section-container-puertas-hoja-doble {
+  width: 100vw;
+  padding: 80px;
+  padding-right: 40px;
+  padding-bottom: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.productos-puertas .section-container-puertas-hoja-doble .puertas-hoja-doble {
+  width: 180px;
+  height: 200px;
+  padding: 5px;
+}
+.productos-puertas .section-container-puertas-hoja-doble .puertas-hoja-doble:hover {
+  transform: scale(2);
 }
 
 /*------ESTILOS DEL FOOTER------*/
 footer {
   display: grid;
   grid-template-rows: auto;
-  width: 100vw;
+  width: 100%;
   height: 450%;
   background-color: rgb(0, 0, 255);
 }
