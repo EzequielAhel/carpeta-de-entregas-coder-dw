@@ -29,10 +29,10 @@
 /*------ESTILOS DEL BODY------*/
 
 body {
-    width: 100%;
+    width: 100vw;
     height: 100%;
-    overflow-x: hidden;
     font-family: 'Roboto';
+    overflow-x: hidden;
     background: rgb(2,0,32);
     background: -moz-linear-gradient(0deg, rgba(2,0,32,1) 0%, rgba(18,18,157,1) 35%, rgba(8,118,194,1) 100vw);
     background: -webkit-linear-gradient(0deg, rgba(2,0,32,1) 0%, rgba(18,18,157,1) 35%, rgba(8,118,194,1) 100vw);
@@ -846,44 +846,107 @@ div {
 footer {
     display:grid;
     grid-template-rows: auto;
+    width: 100vw;
+    height: 450%;
+    background-color: rgb(0, 0, 255);
+}
+
+footer div img {
+    display:flex;
+    justify-content:center;
+    width: 70px;
+    height: 70px;
+    margin-left: 50%;
+    margin-top: 2%;
+    
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+footer div div h4 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 5%;
+    margin-top: 2%;
+    color: black;
+}
+
+footer div div p {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+footer {
+    display:grid;
+    grid-template-rows: auto;
     width: 100%;
     height: 450%;
     background-color: rgb(0, 0, 255);
 
     img {
         display:flex;
-        justify-content:center;
+        justify-content:left;
         width: 70px;
         height: 70px;
-        margin-left: 50%;
-        margin-top: 2%;
-    
+        margin-left: 2.5%;
+        margin-top: 2.5%;
     }
 
+    
     .redes-sociales {
         display: flex;
         justify-content: center;
-        margin: 0%;
         padding: 10px;
     }
 
     h4 {
         display: flex;
-        justify-content: center;
-        font-size: 30px;
+        justify-content: left;
+        font-size: 22px;
         font-weight: 700;
-        margin-left: 5%;
-        margin-top: 2%;
+        margin-left: 10%;
+        margin-top: -5.5%;
         color: black;
+        text-decoration-line:underline;
+        text-decoration-color: #f7f7fa;
+    }
+
+    .ubicacion-footer {
+        margin-top: -20%;
+    }
+
+    .map-footer {
+        margin-left: 10%;
     }
 
     p {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         color: white;
         font-weight: 700;
         font-size: 20px;
         padding: 10px;
+        margin-left: 9.5%;
+        margin-top: 20%;
     }
 }
 
