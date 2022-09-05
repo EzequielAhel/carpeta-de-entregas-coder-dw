@@ -4,54 +4,75 @@ footer {
     display:grid;
     grid-template-rows: auto;
     width: 100vw;
-    height: 450%;
+    height: 100%;
     background-color: rgb(0, 0, 255);
 
-    
     img {
         display:flex;
-        justify-content:center;
+        justify-content: center;
         width: 70px;
         height: 70px;
-        margin-left: 50%;
+        margin-left: 2%;
         margin-top: 2%;
-    
-    }
-
-    .redes-sociales {
-        display: flex;
-        justify-content: center;
-        margin: 0%;
-        padding: 10px;
     }
 
     h4 {
         display: flex;
-        justify-content: center;
-        font-size: 30px;
+        justify-content: left;
+        font-size: 20px;
         font-weight: 700;
-        margin-left: 5%;
-        margin-top: 2%;
-        color: black;
+        margin-left: 10%;
+        margin-top: -5%;
+        color: white;
+        text-decoration: underline .3rem;
+        text-decoration-color: black;
     }
 
     p {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         color: white;
+        margin-left: 10%;
         font-weight: 700;
-        font-size: 20px;
-        padding: 10px;
+        font-size: 16px;
     }
-}
 
-div {
+    .h4-redes {
+        display: flex;
+        justify-content: left;
+        margin-top: -15%;
+        margin-left: 10%;
+        margin-bottom: 12%;
+    }
+
+    .redes-sociales {
+        display:flex;
+        justify-content:left;
+        margin-top: -10%;
+        margin-left: 9%;
+        margin-bottom: 2%;
+
+        .redes-sociales-icon {
+            margin-left: 1%;
+        }
+    }
+
+    .ubicacion-footer {
+        margin-top: -8.5%;
+        margin-left: 35%;
+
+        .map-footer {
+            margin-left: 10%;
+            margin-bottom: 8%;
+        }
+    }
+
     .copyright {
         display: flex;
         justify-content: center;
         color: white;
         font-weight: 700;
-        font-size: 20px;
-        margin-top: 10px;
+        font-size: 18px;
+        padding-top: 1%;
     }
 }

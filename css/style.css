@@ -48,8 +48,8 @@ p5 {
 body {
   width: 100vw;
   height: 100%;
-  font-family: "Roboto";
   overflow-x: hidden;
+  font-family: "Roboto";
   background: rgb(2, 0, 32);
   background: -moz-linear-gradient(0deg, rgb(2, 0, 32) 0%, rgb(18, 18, 157) 35%, rgb(8, 118, 194) 100vw);
   background: -webkit-linear-gradient(0deg, rgb(2, 0, 32) 0%, rgb(18, 18, 157) 35%, rgb(8, 118, 194) 100vw);
@@ -62,7 +62,7 @@ body .wsp {
   width: 50px;
   height: 50px;
   position: fixed;
-  right: 0.3rem;
+  right: 0.5rem;
   bottom: 1rem;
 }
 body .btn-wsp {
@@ -72,6 +72,7 @@ body .btn-wsp {
 
 /*------ESTILOS DEL HEADER------*/
 .top-header-info {
+  width: 100%;
   font-size: 16px;
   color: white;
   background-color: #000000;
@@ -83,6 +84,7 @@ body .btn-wsp {
 
 header {
   position: fixed;
+  width: 100vw;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.75);
   -webkit-caja-sombra: 10px 10px 15px 0px rgba(0, 0, 0, 0.75);
   -moz-caja-sombra: 10px 10px 15px 0px rgba(0, 0, 0, 0.75);
@@ -168,8 +170,8 @@ header nav ul li a:hover::before {
 
 /*------ESTILOS DEL MAIN------*/
 .portada {
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: 50vw;
   background: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.38)), url(../imagenes/banners/ventana-semiabierta-2.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -233,7 +235,7 @@ header nav ul li a:hover::before {
 .portada a:hover {
   transform: scale(1.1);
 }
-.portada a::before {
+.portada a:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -241,12 +243,12 @@ header nav ul li a:hover::before {
   width: 100%;
   height: 2.5px;
   background: linear-gradient(to left, #f7f7fa, #f7f7fa, #f7f7fa);
-  transform: scaleX(0);
+  transform: scale(0);
   transform-origin: center;
   transition: 0.5s ease;
 }
 .portada a:hover:before {
-  transform: scaleX(1);
+  transform: scale(1);
 }
 
 .h2-a {
@@ -260,7 +262,7 @@ header nav ul li a:hover::before {
   color: white;
   font-weight: 700;
   font-family: "Roboto";
-  width: 100%;
+  width: 100vw;
   text-align: center;
   padding: 25px;
   margin: 0%;
@@ -308,8 +310,8 @@ header nav ul li a:hover::before {
 }
 
 .carousel .d-block {
-  width: 250px;
-  height: 500px;
+  width: 400px;
+  height: 600px;
 }
 
 .row-cols-1 {
@@ -742,108 +744,68 @@ footer {
   display: grid;
   grid-template-rows: auto;
   width: 100vw;
-  height: 450%;
-  background-color: rgb(0, 0, 255);
-}
-
-footer div img {
-  display: flex;
-  justify-content: center;
-  width: 70px;
-  height: 70px;
-  margin-left: 50%;
-  margin-top: 2%;
-}
-
-.redes-sociales {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-}
-
-footer div div h4 {
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  font-weight: 700;
-  margin-left: 5%;
-  margin-top: 2%;
-  color: black;
-}
-
-footer div div p {
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-weight: 700;
-  font-size: 20px;
-  padding: 10px;
-}
-
-.copyright {
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-weight: 700;
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-footer {
-  display: grid;
-  grid-template-rows: auto;
-  width: 100%;
-  height: 450%;
+  height: 100%;
   background-color: rgb(0, 0, 255);
 }
 footer img {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   width: 70px;
   height: 70px;
-  margin-left: 2.5%;
-  margin-top: 2.5%;
-}
-footer .redes-sociales {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
+  margin-left: 2%;
+  margin-top: 2%;
 }
 footer h4 {
   display: flex;
   justify-content: left;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   margin-left: 10%;
-  margin-top: -5.5%;
-  color: black;
-  text-decoration-line: underline;
-  text-decoration-color: #f7f7fa;
-}
-footer .ubicacion-footer {
-  margin-top: -20%;
-}
-footer .map-footer {
-  margin-left: 10%;
+  margin-top: -5%;
+  color: white;
+  text-decoration: underline 0.3rem;
+  text-decoration-color: black;
 }
 footer p {
   display: flex;
   justify-content: left;
   color: white;
+  margin-left: 10%;
   font-weight: 700;
-  font-size: 20px;
-  padding: 10px;
-  margin-left: 9.5%;
-  margin-top: 20%;
+  font-size: 16px;
 }
-
-div .copyright {
+footer .h4-redes {
+  display: flex;
+  justify-content: left;
+  margin-top: -15%;
+  margin-left: 10%;
+  margin-bottom: 12%;
+}
+footer .redes-sociales {
+  display: flex;
+  justify-content: left;
+  margin-top: -10%;
+  margin-left: 9%;
+  margin-bottom: 2%;
+}
+footer .redes-sociales .redes-sociales-icon {
+  margin-left: 1%;
+}
+footer .ubicacion-footer {
+  margin-top: -8.5%;
+  margin-left: 35%;
+}
+footer .ubicacion-footer .map-footer {
+  margin-left: 10%;
+  margin-bottom: 8%;
+}
+footer .copyright {
   display: flex;
   justify-content: center;
   color: white;
   font-weight: 700;
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 18px;
+  padding-top: 1%;
 }
 
 /*------ESTILOS MEDIA QUERIES------*/
