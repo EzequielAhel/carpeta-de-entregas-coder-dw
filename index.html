@@ -54,10 +54,9 @@
             </div>
         </div>
 
-        <!--Sección NAV PRINCIPAL-->
         <nav class="navbar navbar-expand-lg bg-opacity-75">
             <!--Logo de la empresa-->
-            <img  src="./imagenes/logo-empresa/logo-empresa.png" alt="logo-empresa">
+            <img src="../imagenes/logo-empresa/logo-empresa.png" alt="">
 
             <div class="container-fluid">
 
@@ -65,8 +64,8 @@
                 <h1 class="nav-link active">Aberturas Aries</h1>
 
                 <!--Botón de Búsqueda-->
-                <div>
-                    <form class="d-flex" role="buscar">
+                <div class="btn-busqueda">
+                    <form class="d-flex" role="Buscar">
                         <input class="form-control m-2" type="" placeholder="Buscar">
                         <button class="btn border-light btn-primary" type="">Buscar</button>
                     </form>
@@ -76,44 +75,51 @@
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"
-                                href="./index.html">Inicio</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="./pages/productos.html">Productos</a>
+                        </li>
 
-                            <ul class="dropdown-menu">
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="btn-group dropend">
+                                    <button type="button"
+                                        class="btn btn-primary dropdown-toggle" data-bs-toggle= dropdown aria-expanded="false">Puertas
+                                    </button>
+                                    <button type="button" class="btn btn-link"></button>
+                                </div>
+                            </li>
+
+                            <button>
                                 <li>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-primary dropdown-toggle"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Puertas
-                                        </button>
-                                        <button type="button" class="btn btn-link">
-                                <li>
-                                    <a href="../productos/puertasaluminio.html">Puertas de Alumninio</a>
+                                    <a href="../productos/puertasdealuminio.html">Puertas de Alumninio</a>
                                 </li>
-                                </button>
-                                <button type="button" class="btn btn-link">
-                                    <li>
-                                        <a href="../productos/puertaschapas.html">Puertas de Chapas</a>
-                                    </li>
-                                </button>
-                                <button type="button" class="btn btn-link">
-                                    <li>
-                                        <a href="../productos/puertasplacas.html">Puertas Placas</a>
-                                    </li>
-                                </button>
-                                <button type="button" class="btn btn-link">
-                                    <li>
-                                        <a href="../productos/puertashojamedia.html">Puertas Hoja y Media</a>
-                                    </li>
-                                </button>
-                                <button type="button" class="btn btn-link">
-                                    <li>
-                                        <a href="../productos/puertas2hojas.html">Puertas Doble Hojas</a>
-                                    </li>
-                                </button>
-                                </button>
+                            </button>
+                            <button type="button" class="btn btn-link">
+                                <li>
+                                    <a href="../productos/puertaschapas.html">Puertas de Chapas</a>
+                                </li>
+                            </button>
+                            <button type="button" class="btn btn-link">
+                                <li>
+                                    <a href="../productos/puertasplacas.html">Puertas Placas</a>
+                                </li>
+                            </button>
+                            <button type="button" class="btn btn-link">
+                                <li>
+                                    <a href="../productos/puertashojamedia.html">Puertas Hoja y Media</a>
+                                </li>
+                            </button>
+                            <button type="button" class="btn btn-link">
+                                <li>
+                                    <a href="../productos/puertas2hojas.html">Puertas Doble Hojas<a>
+                                </li>
+                            </button>
+
+                            <button>
                                 <li>
                                     <hr class="dropdown-divider">
                                     </hr>
@@ -149,14 +155,15 @@
                                         data-bs-toggle="dropdown" aria-expanded="false">Vidrios
                                     </button></a>
                                 </li>
-                        </li>
+                            </button>
+                        </ul>
+
+                        <li class="nav-item"><a class="nav-link" href="../pages/nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/carrito.html">Carrito</a></li>
                     </ul>
-
-                    <li class="nav-item"><a class="nav-link" href="./pages/nosotros.html">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./pages/carrito.html">Carrito</a></li>
-
                 </div>
+            </div>
         </nav>
     </header>
 
@@ -179,7 +186,8 @@
             <img class="surmetal-logo" src="./imagenes/logos-auspiciantes/sur-metal-logo.png" alt="surmetal-logo">
             <img class="claraluz-logo" src="./imagenes/logos-auspiciantes/claraluz-logo.png" alt="claraluz-logo">
             <img class="fraccaro-logo" src="./imagenes/logos-auspiciantes/fraccaro-logo.png" alt="fraccaro-logo">
-            <img class="ds-accesorios-logo" src="./imagenes/logos-auspiciantes/ds-accesorios-logo.png" alt="ds-accesorios-logo">
+            <img class="ds-accesorios-logo" src="./imagenes/logos-auspiciantes/ds-accesorios-logo.png"
+                alt="ds-accesorios-logo">
         </section>
 
         <!--Carrusel de Imágenes-->
@@ -236,7 +244,7 @@
                     <div class="card-body">
                         <h3 class="card-title">Puertas</h3>
                     </div>
-                    
+
                     <div class="card-footer">
                         <a href="#">Visualizar</a>
                     </div>
@@ -250,7 +258,7 @@
                     <div class="card-body">
                         <h3 class="card-title">Ventanas</h3>
                     </div>
-                    
+
                     <div class="card-footer">
                         <a href="#">Visualizar</a>
                     </div>
@@ -343,7 +351,10 @@
             <div class="ubicacion-footer">
                 <h4>UBICACIÓN:</h4>
                 <p>• Salta 1381, Pergamino, Buenos Aires.</p>
-                <iframe class="map-footer" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.321705827059!2d-60.5775523852212!3d-33.88136762714171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b9caae8a05a2e3%3A0xa95128e8b6fe7873!2sSalta%201381%2C%20Pergamino%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1662327067901!5m2!1ses-419!2sar" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                <iframe class="map-footer"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.321705827059!2d-60.5775523852212!3d-33.88136762714171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b9caae8a05a2e3%3A0xa95128e8b6fe7873!2sSalta%201381%2C%20Pergamino%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1662327067901!5m2!1ses-419!2sar"
+                    width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
 
@@ -351,10 +362,12 @@
             <div>
                 <h4 class="h4-redes">ENCONTRANOS EN:</h4>
                 <div class="redes-sociales">
-                    <a class="redes-sociales-icon" href="#"><img src="./imagenes/iconos/facebook.png" alt="logo-facebook"></a>
-                
-                    <a class="redes-sociales-icon" href="#"><img src="./imagenes/iconos/instagram.png" alt="logo-instagram"></a>
-                
+                    <a class="redes-sociales-icon" href="#"><img src="./imagenes/iconos/facebook.png"
+                            alt="logo-facebook"></a>
+
+                    <a class="redes-sociales-icon" href="#"><img src="./imagenes/iconos/instagram.png"
+                            alt="logo-instagram"></a>
+
                     <a class="redes-sociales-icon" href="#"><img src="./imagenes/iconos/gmail.png" alt="logo-gmail"></a>
                 </div>
             </div>
@@ -375,7 +388,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!--Whatsapp Contacto-->
     <div class="wsp">
