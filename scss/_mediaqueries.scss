@@ -1,376 +1,592 @@
 // MEDIA QUERIES
-
-@media screen and (max-width: 1082px) {
+@media screen and (max-width: 1024px) {
 
     body {
-        font-weight: 280px;
-        font-size: 16px;
+    width: 100vw;
+    height: 100%;
     }
 
     header nav img {
-        width: 65px;
-        height: 65px;
+    width: 60px;
+    height: 60px;
+    }
+    .nav-link {
+    margin: 2%;
+    font-size: 12px;
+    font-weight: 600;
+    }
+    header nav .navbar-nav {
+    padding-left: 2%;
+    padding-right: 2%;
+    }
+    .form-control {
+    width: 80%;
+    height: 2%;
     }
 
-    header nav h1 {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 1040px) {
-
-    body {
-        font-weight: 250px;
-        font-size: 14px;
+    .portada {
+    width: 100vw;
+    height: 58vw;
     }
 
-    header nav img {
-        width: 60px;
-        height: 60px;
+    .auspiciantes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    }
+    .auspiciantes .claraluz-logo {
+    margin-left: 8%;  
+    width: 220px;
+    height: 70px;
     }
 
-    header nav h1 {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 930px) {
-    
-    body {
-        font-weight: 200px;
-        font-size: 18px;
+    .carousel .d-block {
+    height: 450px;
     }
 
-    header nav h1 {
-        font-size: 16px;
+    footer {
+    display: grid;
+    grid-template-rows: auto;
+    width: 100vw;
+    height: 100%;
+    background-color: rgb(0, 0, 255);
+    }
+    footer img {
+    width: 40px;
+    height: 40px;
+    margin-left: 1%;
+    margin-top: 1%;
+    }
+    footer h4 {
+    font-size: 16px;
+    margin-left: 9%;
+    margin-top: -4%;
+    }
+    footer p {
+    margin-left: 9%;
+    }
+    footer .h4-redes {
+    margin-top: -14%;
+    margin-left: 9%;
+    margin-bottom: 2%;
+    }
+    footer .redes-sociales {
+    margin-top: 0%;
+    margin-left: 8%;
+    margin-bottom: 2%;
+    }
+    footer .ubicacion-footer {
+    margin-top: -10.5%;
+    margin-left: 55%;
+    }
+    footer .ubicacion-footer .map-footer {
+    margin-left: 6%;
+    margin-bottom: 20%;
+    width: 250px;
+    height: 100px;
     }
 
-    header nav img {
-        width: 50px;
-        height: 50px;
+    div .accordion-title {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto";
+    font-size: 1.4rem;
+    font-weight: 900;
+    padding-left: 40%;
     }
-
-    header nav ul li a {
-        font-weight: 200px;
-        font-size: 14px;
-        margin: 20px;
+    div .form-contacto {
+    margin-left: 25%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    
-    body {
-        width: 100%;
-        height: 100%;
-        font-weight: 180px;
-        font-size: 16px;
+
+    body .wsp {
+        width: 30px;
+        height: 30px;
     }
 
-    header nav h1 {
-        font-size: 14px;
-    }
-
-    header nav img {
-        width: 50px;
-        height: 50px;
-    }
-
-    header nav ul li a {
-        font-weight: 100px;
+    .top-header-info {
         font-size: 12px;
-        margin: 14px;
+        font-weight: 600;
+    }
+    .top-header-info .info-telefono {
+    margin-left: 20%;
     }
 
-    .portada h2 {
-        font-size: 60px;
-        margin-top: 100px;
+    header {
+    height: 100vw;
     }
-
-    .img-auspiciantes {
+    header nav img {
+    width: 42px;
+    height: 42px;
+    }
+    h1.nav-link.active {
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        margin-left: 8%;
+        margin-top: -9%;
+    }
+    .btn-busqueda {
+        width: 50%;
+        margin-left: 50%;
+        margin-top: -12%;
+    }
+    .btn.border-light.btn-primary {
+        height: 5%;
+        margin-right: 0%;
+        margin-top: 1%;
+    }
+    header nav div.collapse.navbar-collapse {
         display: grid;
-        grid-template-columns:repeat(2, 1fr);
-        grid-auto-rows: 250px;
-        grid-area: span;
-        gap: 15px;
-        margin-top: 4%;
-        margin-bottom: 4%;
-    }
-
-    .img-1 {
-        margin-bottom: 5%;
-        margin-left: 15%;
-        width: 250px;
-        grid-column-start: span 1;
-    }
-
-    .img-2 {
-        margin-bottom: 5%;
-        margin-left: 15%;
-        width: 250px;
-        grid-column-start: span 1;
-    }
-
-    .img-3 {
-        margin-bottom: 5%;
-        margin-left: 15%;
-        width: 250px;
-        grid-column-start: span 1;
-    }
-
-    .img-4 {
-        margin-bottom: 5%;
-        margin-left: 15%;
-        width: 250px;
-        grid-column-start: span 1;
-    }
-
-    .img-5 {
-        margin-bottom: 5%;
-        margin-left: 15%;
-        width: 250px;
-        grid-column-start: span 1;
-    }
-
-    .img-6 {
-        margin-bottom: 5%;
-        margin-left: 20%;
-        width: 200px;
-        grid-column-start: span 1;
-    }
-
-    footer {
-        display:grid;
-        grid-template-rows: auto;
-        
-        width: 100;
-        height: 200%;
-        background-color: rgb(0, 0, 255);
-    }
-
-    footer div img {
-        display:flex;
-        justify-content:center;
-        width: 50px;
-        height: 50px;
-        margin-left: 45%;
-        
-    }
-
-    .p-1 {
-        display: flex;
         justify-content: center;
-        font-size: 18px;
-        font-weight: 400;
-        padding: 10px;
+    }
+    .navbar{
+    height: 18vw;
+    }
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-item {
+    padding-right: 4%;
+    }
+    div ul li a.nav-link {
+        font-size: 16px;
+        padding-top: 4%;
+        padding-bottom: 4%;
     }
 
-    footer div div h4 {
-        display: flex;
-        justify-content: center;
-        color: black;
-        padding: 10px;
+    .header-secciones {
+        position: relative;
+        height: 20vw;
     }
 
-    footer div div p {
-        display: flex;
-        justify-content: center;
-        color: white(0, 0, 0);
-        font-weight: 400;
-        font-size: 18px;
-        padding: 10px;
+    .portada {
+    width: 100vw;
+    height: 68vw;
+    }
+    .portada h2 {
+    font-size: 40px;
+    }
+    .portada a {
+    font-size: 12px;
+    font-weight: 600;
+    }
+
+    .auspiciantes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    }
+    .auspiciantes .flamia-logo {
+    width: 180px;
+    height: 50px;
+    }
+    .auspiciantes .caiaplacas-logo {
+    width: 180px;
+    height: 50px;
+    }
+    .auspiciantes .surmetal-logo {
+    width: 180px;
+    height: 50px;
+    }
+    .auspiciantes .claraluz-logo {
+    width: 180px;
+    height: 50px;
+    }
+    .auspiciantes .fraccaro-logo {
+    width: 180px;
+    height: 50px;
+    }
+    .auspiciantes .ds-accesorios-logo {
+    width: 180px;
+    height: 50px;
+    }
+
+    .carousel .d-block {
+    width: 400px;
+    height: 400px;
+    }
+
+    section .section-container-galeria {
+    grid-auto-rows: 200px;
+    }
+    section .img-galeria-1 {
+    grid-column-start: span 3;
+    }
+    section .img-galeria-2 {
+    grid-row-start: span 1;
+    }
+    section .img-galeria-3 {
+    grid-row-start: span;
+    }
+    section .img-galeria-5 {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+    }
+    section .img-galeria-6 {
+    grid-row-start: span 3;
+    }
+    section .img-galeria-9 {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+    }
+    section .img-galeria-10 {
+    grid-column-start: span 3;
+    }
+
+    footer img {
+    width: 35px;
+    height: 35px;
+    margin-left: 1%;
+    margin-top: 1%;
+    }
+    footer h4 {
+    font-size: 14px;
+    margin-left: 9%;
+    margin-top: -4.5%;
+    }
+    footer p {
+    font-size: 12px;
+    }
+    footer .h4-redes {
+    margin-top: -17%;
+    }
+    footer .ubicacion-footer {
+    margin-top: -12%;
+    }
+    footer .ubicacion-footer .map-footer {
+    margin-left: 9%;
+    width: 220px;
+    height: 120px;
+    }
+    footer .copyright {
+    font-size: 12px;
+    padding-top: 2%;
     }
 }
 
 @media screen and (max-width: 320px) {
-    body {
-        width: 100%;
-        height: 100%;
-        font-weight: 200px;
-        font-size: 16px;
+
+    body .wsp {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    right: 0.5rem;
+    bottom: 1rem;
     }
-    
-    header{
-        position: fixed;
+    body .btn-wsp {
+    width: 100%;
+    height: 100%;
     }
-    
-    header nav {
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
+
+    .top-header-info {
+    font-size: 8px;
+    font-weight: 600;
     }
-    
+    .top-header-info .info-telefono {
+    margin-left: 4%;
+    }
+
+    header {
+    height: 160vw;
+    }
     header nav img {
-        margin-top: 5px;
-
+    width: 35px;
+    height: 35px;
     }
-    
-    header nav h1 {
-        font-size: 25px;
-        margin-top: 16px;
+    h1.nav-link.active {
+    display: flex;
+    justify-content: center;
+    margin-left: 25%;
+    margin-top: -13%;
     }
-    
-    header nav div {
-        margin-top: 15px;
+    header nav div.collapse.navbar-collapse {
+    display: grid;
     }
-    header nav ul {
-        text-align: center;
+    .navbar{
+    height: 40vw;
     }
-    
-    header nav ul li a {
-        display: block;
-        font-size: .5em;
-        font-weight: 200;
+    .navbar-nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
     }
-
-    .img-auspiciantes {
-        display: grid;
-        grid-template-columns:repeat(3, 1fr);
-        grid-auto-rows: 250px;
-        grid-area: span;
-        gap: 15px;
-        margin-top: 4%;
-        margin-bottom: 4%;
+    .nav-item {
+    padding-right: 0%;
+    margin-right: 0%;
     }
-
-    .img-1 {
-        margin-bottom: 5%;
-        margin-left: 15%;
-        width: 250px;
-        grid-column-start: span 2;
+    div ul li a.nav-link {
+    background-color: rgb(252, 252, 252);
+    font-size: 10px;
+    padding-top: 4%;
+    padding-bottom: 4%;
     }
 
-    .img-2 {
-        margin-bottom: 5%;
-        margin-left: 15%;
-        width: 250px;
-        grid-column-start: span 2;
+    .header-secciones {
+    position: relative;
+    height: 45vw;
     }
 
-    .img-3 {
-        margin-bottom: 5%;
-        margin-left: 15%;
-        width: 250px;
-        grid-column-start: span 2;
-    }
-
-    .img-4 {
-        margin-bottom: 5%;
-        margin-left: 15%;
-        width: 250px;
-        grid-column-start: span 2;
-    }
-
-    .img-5 {
-        margin-bottom: 5%;
-        margin-left: 15%;
-        width: 250px;
-        grid-column-start: span 2;
-    }
-
-    .img-6 {
-        margin-bottom: 5%;
-        margin-left: 20%;
-        width: 200px;
-        grid-column-start: span 2;
-    }
-    
     .portada {
-        width: 100%;
-        height: 100vh;
-        background-size:cover;
-        background-attachment:scroll;
+    width: 100vw;
+    height: 150vw;
     }
-    
     .portada h2 {
-        font-weight: 600;
-        font-size: 20px;
-        margin-top: 40%;
-        padding: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px;
+    border: 4px solid white;
     }
-    
     .portada p {
-        font-size: 20px;
-        margin: 20px;
+    font-size: 16px;
+    margin: 12px;
     }
-    
     .portada a {
-        font-size: 20px;
-        padding: 20px;
-    }
-    
-    .productos > div {
-        margin-top: 0px;
-    }
-    
-    .productos div div {
-        width: 250px;
-        height: 350px;
-        margin-top: 20px;
-    }
-    
-    .productos div div h3 {
-        margin-top: 20px;
-        margin-bottom: 10%;
-    }
-    
-    .productos div div a {
-        font-weight: 800;
-        padding: 10px;
-    }
-    
-    .galeria {
-        width: 100%;
-        height: 50vh;
-        margin-top: 15px;
-    }
-    
-    .galeria h2 {
-        font-weight: 600;
-        font-size: 20px;
-        padding: 15px;
-    }
-    
-    footer {
-        display:grid;
-        grid-template-rows: auto;
-        
-        width: 100;
-        height: 300%;
-        background-color: rgb(0, 0, 255);
+    font-size: 12px;
+    font-weight: 900;
     }
 
-    footer div img {
-        display:flex;
-        justify-content:center;
-        width: 50px;
-        height: 50px;
-        margin-left: 140px;
-        margin-top: 5%;
-        
+    .h2-a {
+    font-weight: 600;
+    padding: 10px;
+    margin-top: 6px;
     }
 
-    .p-1 {
-        display: flex;
-        justify-content: center;
-        font-size: 12px;
-        font-weight: 400;
-        padding: 10px;
+    .auspiciantes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    }
+    .auspiciantes .flamia-logo {
+    margin-left: 20%;
+    padding-bottom: 0%;
+    width: 150px;
+    height: 70px;
+    }
+    .auspiciantes .caiaplacas-logo {
+    margin-left: 20%;
+    padding-top: 1%;
+    width: 180px;
+    height: 60px;
+    }
+    .auspiciantes .surmetal-logo {
+    margin-left: 20%;
+    padding-top: 2%;
+    width: 170px;
+    height: 50px;
+    }
+    .auspiciantes .claraluz-logo {
+    margin-left: 15%;
+    padding-top: 2%;
+    width: 220px;
+    height: 50px;
+    }
+    .auspiciantes .fraccaro-logo {
+    margin-left: 15%;
+    padding-top: 2%;
+    width: 220px;
+    height: 50px;
+    }
+    .auspiciantes .ds-accesorios-logo {
+    margin-left: 25%;
+    padding-top: 2%;
+    width: 140px;
+    height: 50px;
     }
 
-    footer div div h4 {
-        font-size: 16px;
-        display: flex;
-        justify-content: center;
-        color: rgb(8, 8, 8);
-        padding: 10px;
+    .carousel .d-block {
+    width: 400px;
+    height: 150px;
     }
 
-    footer div div p {
-        display: flex;
-        justify-content: center;
-        color: white;
-        font-weight: 400;
-        font-size: 12px;
-        padding: 10px;
+    .row-cols-1 {
+    display: grid;
+    }
+    .row-cols-1 .col-1 {
+    width: 100%;
+    }
+    .row-cols-1 .col-2 {
+    width: 200%;
+    padding-top: 10%;
+    }
+    .row-cols-1 .col-3 {
+    width: 200%;
+    padding-top: 10%;
+    }
+    .row-cols-1 .col-4 {
+    width: 200%;
+    padding-top: 10%;
+    }
+    .row-cols-1 .col-5 {
+    width: 200%;
+    padding-top: 10%;
+    }
+    .row-cols-1 .col-6 {
+    width: 200%;
+    padding-top: 10%;
+    }       
+    .section-galeria {
+    height: 30vh;
+    }
+
+    .section-galeria .section-galeria-h2 {
+    font-weight: 600;
+    font-size: 15px;
+    border: 4px solid white;
+    padding: 10px;
+    }
+    .section-galeria .section-galeria-a {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 10px;
+    margin-top: 6px;
+    }
+    section .section-container-galeria {
+    width: 100%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+    gap: 6px;
+    }
+    section .img-galeria-1 {
+    grid-row-start: span 1;
+    }
+    section .img-galeria-2 {
+    grid-row-start: span 1;
+    grid-column-start: span 3;
+    }
+    section .img-galeria-3 {
+    grid-row-start: span 1;
+    }
+    section .img-galeria-4 {
+    grid-row-start: span 1;
+    }
+    section .img-galeria-5 {
+    grid-column-start: span 2;
+    }
+    section .img-galeria-6 {
+    grid-row-start: span 1;
+    grid-column-start: span 3;
+    }
+    section .img-galeria-7 {
+    grid-row-start: span 1;
+    }
+    section .img-galeria-8 {
+    grid-column-start: span 1;
+    }
+    section .img-galeria-9 {
+    grid-row-start: span 1;
+    }
+    section .img-galeria-10 {
+    grid-column-start: span 3;
+    }
+
+    .productos-puertas .card-header {
+    background-color: rgb(0, 0, 255);
+    padding: 2%;
+    }
+    .productos-puertas .h4-caracteristicas-puertas {
+    font-weight: 700;
+    font-size: 14px;
+    margin: 4px;
+    }
+    .productos-puertas .puertas-info {
+    font-weight: 800;
+    font-size: 12px;
+    margin: 5px;
+    }
+    .productos-puertas .btn-consulta {
+    font-weight: 700;
+    font-size: 12px;
+    margin: 4px;
+    }
+
+    div .accordion-title {
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 25%;
+    }
+    div .parrafo {
+    font-size: 15px;
+    }
+
+    div .form-contacto {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    padding-top: 1%;
+    }
+    div form div label h4 {
+    font-size: 14px;
+    font-weight: 500;
+    }
+
+    div .card-title-carrito {
+    font-size: 14px;
+    font-weight: 500;
+    }
+    div .card-body-carrito {
+    background-color: white;
+    margin-bottom: 2%;
+    }
+    .card-text {
+    font-size: 14px;
+    }
+    div .card-footer-carrito {
+    font-size: 14px;
+    font-weight: 500;
+    }
+
+    footer img {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 50%;
+    }
+    footer h4 {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    margin-left: 10%;
+    margin-top: 1.5%;
+    }
+    footer p {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    font-weight: 900;
+    font-size: 10px;
+    }
+    footer .ubicacion-footer {
+    margin-top: 0%;
+    margin-left: 1%;
+    }
+    footer .ubicacion-footer .map-footer {
+    display: flex;
+    justify-content: center;
+    margin-left: 32%;
+    margin-bottom: 2%;
+    width: 150px;
+    height: 120px;
+    }
+    footer .h4-redes {
+    display: flex;
+    justify-content: center;
+    margin-top: 0%;
+    }
+    footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+    }
+    footer .redes-sociales .redes-sociales-icon {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    }
+    footer .copyright {
+    font-size: 10px;
+    padding-top: 3%;
     }
 }

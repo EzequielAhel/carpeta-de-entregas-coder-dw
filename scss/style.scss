@@ -5,27 +5,6 @@
     box-sizing: border-box;
 }
 
-// BUCLE
-@for $i from 1 through 5 {
-    p#{$i} {
-        font-size: 12em / $i;
-    }
-}
-
-@for $i from 1 through 5 {
-    .card-text-1#{$i} {
-        font-size: 12em * $i;
-    }
-}
-
-// MAPAS
-
-// EXTEND
-
-// MIXIN
-
-// ANIDACIÓN*/
-
 /*------ESTILOS DEL BODY------*/
 body {
     width: 100vw;
@@ -906,6 +885,11 @@ header nav ul li a:hover::before {
 
 @media screen and (max-width: 768px) {
 
+  body .wsp {
+    width: 30px;
+    height: 30px;
+  }
+
   .top-header-info {
     font-size: 12px;
     font-weight: 600;
@@ -915,20 +899,27 @@ header nav ul li a:hover::before {
     margin-left: 20%;
   }
 
+  header {
+    height: 100vw;
+  }
+
   header nav img {
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
   }
 
   h1.nav-link.active {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
     margin-left: 8%;
-    margin-top: -12%;
+    margin-top: -9%;
   }
 
-  .btn-search {
-    width: 35%;
-    margin-right: 32%;
-    margin-top: -14%;
+  .btn-busqueda {
+    width: 50%;
+    margin-left: 50%;
+    margin-top: -12%;
   }
 
   .btn.border-light.btn-primary {
@@ -937,17 +928,33 @@ header nav ul li a:hover::before {
     margin-top: 1%;
   }
 
-  header nav .navbar-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 4px;
+  header nav div.collapse.navbar-collapse {
+    display: grid;
+    justify-content: center;
   }
 
-  header nav ul li a {
-    display:grid;
-    
+  .navbar{
+    height: 18vw;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-item {
+    padding-right: 4%;
+  }
+
+  div ul li a.nav-link {
+    font-size: 16px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+
+  .header-secciones {
+    position: relative;
+    height: 20vw;
   }
 
   .portada {
@@ -1101,8 +1108,20 @@ header nav ul li a:hover::before {
   h1.nav-link.active {
     display: flex;
     justify-content: center;
-    margin-left: 25%;
-    margin-top: -13%;
+    font-size: 14px;
+    margin-left: 10%;
+    margin-top: -12%;
+  }
+
+  .btn-busqueda {
+    width: 200%;
+    margin-left: -8%;
+    margin-top: 1%;
+  }
+  .btn.border-light.btn-primary {
+    height: 2%;
+    margin-left: 5%;
+    margin-top: -8%;
   }
 
   header nav div.collapse.navbar-collapse {
@@ -1122,7 +1141,6 @@ header nav ul li a:hover::before {
   .nav-item {
     padding-right: 0%;
     margin-right: 0%;
-  
   }
 
   div ul li a.nav-link {
@@ -1314,7 +1332,6 @@ header nav ul li a:hover::before {
     font-size: 12px;
     margin: 5px;
   }
-  
   .productos-puertas .btn-consulta {
     font-weight: 700;
     font-size: 12px;
@@ -1356,7 +1373,6 @@ header nav ul li a:hover::before {
     font-size: 14px;
     font-weight: 500;
   }
-
 
   footer img {
     display: flex;
